@@ -20,5 +20,9 @@ Performing classification on the dataset, we obtain the classification report gi
 ## Conclusion
 This paper presents the potential of Persistent Homology (PH), a technique from Topological Data Analysis, in classifying mammogram scans. Particularly, it shows how PH can be used in distinguishing breast scans having the presence of cancer or otherwise. Numerous preprocessing steps have been implemented on the images to enhance the classification of the PHCA model. Initially, HOG is used to extract useful information from the images. The feature descriptors detected by HOG were then scaled to remove outliers. Then, PCA is performed on the scaled descriptors to reduce the dimension of the features. Classification on 6000 of these mammogram scans using the novel classifier PHCA shows excellent results. This is shown mainly by the obtained overall Accuracy of 93%. However, this metric lacks some properties that describe important findings from the result of the classification. One of which is that it doesn’t show indepthly the misclassification made by the model. With this, four other metrics are obtained which are Precision, Recall, F1-score, and Sensitivity. The high Precision and Recall values, having an average of 93% and 92%, respectively, measures how the model makes correct predictions. F1-score summarizes these two metrics which obtained an average value of 92.50%. Finally, the average Specificity value is 93% showing how well the model avoids misclassifications.
 
+## References
+[1]	A. Asaad, D. Ali, T. Majeed, and R. Rashid, ‘Persistent Homology for Breast Tumor Classification Using Mammogram Scans’, Mathematics, vol. 10, no. 21, 2022.
+[2]	M. L. D. De Lara, ‘Persistent homology classification algorithm’, PeerJ Computer Science, vol. 9, p. e1195, 2023.
+
 
 
