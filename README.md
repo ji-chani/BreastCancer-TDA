@@ -11,7 +11,6 @@
 - Extract the contents of the `modules.zip` file. You should expect a `modules` folder which contains Python files: `__init__.py`, `classification.py`, `phca.py`, and `pixel_extraction.py`.
 - Create a virtual environment and install all dependices from the `requirements.txt` file.(**Important Note**: Make sure to use Python version (>3.7, <=3.10.10) so that the _ripser_ package will work)
 - Create a `prepared_data` folder in the directory. This will contain the test and train data and targets for later use.
-- Run the `main.py` file. For first time implementation, make sure that the _extract_data_ global controls are set to _True_.
-- If you want to skip the data extraction process, set _extract_data_ to _False_ and make sure that you have the `breast_cancer_dataset.npy` in your directory. File is also available in this repository.
+- Run the `main.py` file. For first time implementation, make sure that the _extract_data_ and _extract_features_ global controls are set to _True_.
 - After running the `main.py` file, you should expect a new file with name `PHCA_predicted_labels.npy`. This contains the true labels and predicted labels by PHCA.
 - Run through the `generate_results.ipynb` Jupyter notebook to plot the results.
