@@ -1,5 +1,7 @@
 numpy
 matplotlib
-opencv-python
-ripser
 sklearn
+scikit-image
+ripser
+opencv-python
+tqdm
