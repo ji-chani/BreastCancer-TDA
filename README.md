@@ -20,8 +20,8 @@ All of these packages are indicated in the requirements.txt file. The ripser pac
 - Extract the contents of each zip file. You should expect two folders: `BreastCancer_Benign` and `BreastCancer_Malignant`
 - If the folders contain the images upon opening, you're all set. If not and you observe another folder with the same name as the one opened, move the "inner" folder to your directory. Upon moving, you won't be needing the now empty folders.
 
-### Main Implementation
-- Download all files from this repository.
+### Main Implementation (without cloning)
+- Download all files from this repository. 
 - Extract the contents of the `modules.zip` file. You should expect a `modules` folder which contains Python files: `__init__.py`, `classification.py`, `phca.py`, and `pixel_extraction.py`.
 - Create a virtual environment and install all dependices from the `requirements.txt` file.(**Important Note**: Make sure to use Python version (>3.7, <=3.10.10) so that the _ripser_ package will work)
 - Create a `prepared_data` folder in the directory. This will contain the test and train data and targets for later use.
@@ -29,5 +29,9 @@ All of these packages are indicated in the requirements.txt file. The ripser pac
 - After running the `main.py` file, you should expect a new file with name `PHCA_predicted_labels.npy`. This contains the true labels and predicted labels by PHCA.
 - Run through the `generate_results.ipynb` Jupyter notebook to plot the results.
 
+### Main Implementation (with cloning)
+```
+git clone 
+```
 ## References
 [1] 
