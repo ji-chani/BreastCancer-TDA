@@ -39,7 +39,21 @@ git clone https://github.com/ji-chani/BreastCancer-TDA.git
 
 ---
 ## Summary of Methodology
-The framework of the implementation is presented in the figure below. All breast cancer mammography scans in the dataset are first converted into grayscale having dimension 224 pixels x 224 pixels x 1 channel. Then, Histogram of Oriented Gradients (HOG) is implemented on each pixel. The defined parameters for the feature descriptor are (8,8) pixels per cell and (3,3) cells per block. The feature descriptor from HOG is then flattened to obtain some vector of dimension 54,756 for each image. Now, due to computational limitations of the device used, only 6000 randomly selected images are considered from the dataset. Of which, 2017 images are classified as benign and 3983 images as malignant. The images are then split into training and test sets with 80:20 ratio. In particular, 4800 images were used for training and 1200 images for validation or testing. After this, the image descriptors are scaled using Standard Scaler. Finally, for the preprocessing stage, Principal Component Analysis (PCA) is performed on the dataset to reduce the dimension. The final feature vectors used for classification has 1,595 dimensions which represent the number of principal components that preserves 95% of the variability of the scaled image descriptors. 
+The framework of the implementation is presented in the figure below. All breast cancer mammography scans in the dataset are first converted into grayscale having dimension 224 pixels x 224 pixels x 1 channel. Then, Histogram of Oriented Gradients (HOG) [2] is implemented on each pixel. The defined parameters for the feature descriptor are (8,8) pixels per cell and (3,3) cells per block. The feature descriptor from HOG is then flattened to obtain some vector of dimension 54,756 for each image. Now, due to computational limitations of the device used, only 6000 randomly selected images are considered from the dataset. Of which, 2017 images are classified as benign and 3983 images as malignant. The images are then split into training and test sets with 80:20 ratio. In particular, 4800 images were used for training and 1200 images for validation or testing. After this, the image descriptors are scaled using Standard Scaler. Finally, for the preprocessing stage, Principal Component Analysis (PCA) [3] is performed on the dataset to reduce the dimension. The final feature vectors used for classification has 1,595 dimensions which represent the number of principal components that preserves 95% of the variability of the scaled image descriptors. 
+![image](framework.png)
+
+## Code Explanation
+- Starting with the `main.py` file, the pixels of the images are first extracted using OpenCV and are organized according to class: benign and malignant.
+- Images are then split into 80:20 train and test sets.
+- Features are extracted from these pixels using HOG and PCA. The scaled principal components that preserves 95% of the variability of the result from HOG are used as features for each image.
+- Classification is implemented using PHCA. Metrics are then computed for analysis.
+- Results of experiment can be viewed in the `generate_results.ipynb` file.
+
+---
 
 ## References
-[1] 
+[1] De Lara, M. L. D. (2023). Persistent homology classification algorithm. PeerJ Computer Science, 9:e1195.
+
+[2] Madhuri, G. and Negi, A. (2023). Discriminative dictionary learning based on statistical methods, page 55–77. Elsevier.
+
+[3] Azman, B., Hussain, S., Azmi, N., Ghani, M., and Norlen, N. (2022). Prediction of distant recurrence in breast cancer using a deep neural network. Revista Internacional de M ´etodos Num ´ericos para C ´alculo y Dise˜no en Ingenier´ıa, 38(1).
