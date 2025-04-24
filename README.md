@@ -2,7 +2,9 @@
 This is the repository associated with the submitted AI Applications article (titled above) in PeerJ Computer Science. It consists of all codes used to implement the experiments in the article. The focus here is to utilize Persistent Homology Classification Algorithm (PHCA) [1], a novel computational topology-based classifier, and some computer vision technique for breast cancer mammography scans detection. To replicate results, follow through the usage instructions elaborate below.
 
 ---
-## Required Packages and Versions
+## Code Information
+
+### Required Packages and Versions
 - **numpy**==2.1.2
 - **matplotlib**==3.9.2
 - **scikit-learn**==1.5.2
@@ -11,7 +13,12 @@ This is the repository associated with the submitted AI Applications article (ti
 - **opencv-python**==4.10.0.84
 - **tqdm**==4.66.6
 
-All of these packages are indicated in the requirements.txt file. The ripser package works better for Python versions >3.7 and <= 3.10.10.
+All of these packages are indicated in the `requirements.txt` file. The ripser package works better for Python versions >3.7 and <= 3.10.10.
+
+### Content
+- A `main.py` file and a `generate_results.ipynb` notebook.
+- `modules` folder containing the following: `__init__.py`, `classification.py`, `phca.py`, and `pixel_extraction.py`
+
 
 ---
 ## Usage Instructions
