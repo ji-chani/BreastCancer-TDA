@@ -1,6 +1,17 @@
 # Topological Insights and Hybrid Feature Extraction for Breast Cancer Detection: A Persistent Homology Classification Approach
 This is the repository associated with the submitted AI Applications article (titled above) in PeerJ Computer Science. It consists of all codes used to implement the experiments in the article. The focus here is to utilize Persistent Homology Classification Algorithm (PHCA) [1], a novel computational topology-based classifier, and some computer vision technique for breast cancer mammography scans detection. To replicate results, follow through the replication process elaborate below.
 
+## Required Packages and Versions
+- **numpy**==2.1.2
+- **matplotlib**==3.9.2
+- **scikit-learn**==1.5.2
+- **scikit-image**==0.24.0
+- **ripser**==0.6.10
+- **opencv-python**==4.10.0.84
+- **tqdm**==4.66.6
+
+All of these packages are indicated in the requirements.txt file. The ripser package works better for Python versions >3.7 and <= 3.10.10.
+
 ## Instructions for Replication
 
 ### Data Preparation
